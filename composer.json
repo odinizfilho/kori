@@ -30,8 +30,8 @@
         }
     },
     "scripts": {
-        "kori-info": [
-            "@php phpinfo();"
+        "make-controller": [
+            "php kori controller"
         ]
     },
     "config": {

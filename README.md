@@ -15,6 +15,9 @@ Para criar um novo controlador em seu projeto, siga estas etapas:
 
 Crie um novo arquivo PHP na pasta de controladores do seu projeto, por exemplo, app/Controllers/NovoController.php.
 
+Ou
+        composer make-controller NomeControlador
+
 Defina a classe do controlador e implemente a lógica desejada:
 
 ```php

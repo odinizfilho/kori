@@ -1,0 +1,30 @@
+<?php
+if ($argc < 3) {
+    echo "Por favor, forneça o tipo ('controller' ou 'model') e o nome como argumentos.\n";
+    exit(1);
+}
+
+$type = $argv[1];
+$name = $argv[2];
+
+if ($type === 'controller') {
+    // Lógica para criar um controlador
+    $controllerContent = "<?php\n\nnamespace Kori\\Controllers;\n\nclass $name\n{\n    public function index()\n    {\n        // Implemente a lógica da ação 'index' aqui\n    }\n}";
+    $file = __DIR__ . "/app/Controllers/$name.php";
+    $message = "Controlador '$name' criado com sucesso em '$file'.";
+} elseif ($type === 'model') {
+    // Lógica para criar um modelo
+    $modelContent = "<?php\n\nnamespace Kori\\Models;\n\nclass $name\n{\n    // Implemente os campos e métodos do modelo aqui\n}";
+    $file = __DIR__ . "/app/Models/$name.php";
+    $message = "Modelo '$name' criado com sucesso em '$file'.";
+} else {
+    echo "Tipo inválido. Use 'controller' ou 'model'.\n";
+    exit(1);
+}
+
+if (file_put_contents($file, $type === 'controller' ? $controllerContent : $modelContent) !== false) {
+    echo $message . "\n";
+} else {
+    echo "Ocorreu um erro ao criar o $type.\n";
+    exit(1);
+}
