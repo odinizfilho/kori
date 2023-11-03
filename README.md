@@ -53,6 +53,18 @@ return [
 ```
 Neste exemplo, estamos definindo uma rota GET para a raiz do aplicativo (/) que aponta para a ação index do controlador NovoController. Você pode adicionar mais rotas conforme necessário para o seu projeto.
 
+## Uso do Preact.js
+
+PreactJS é uma biblioteca JavaScript de código aberto que oferece uma alternativa mais leve e rápida ao React para o desenvolvimento de interfaces de usuário.
+
+Criar um componente usando Kori
+```bash
+composer make-preact Nomecomponent
+```
+
+[Documentação](https://preactjs.com/guide/v10/getting-started)
+
+
 
 
 ## Licença

@@ -1,6 +1,6 @@
 <?php
 if ($argc < 3) {
-    echo "Por favor, forneça o tipo ('controller' ou 'model') e o nome como argumentos.\n";
+    echo "Por favor, forneça o tipo ('controller', 'model' ou 'component') e o nome como argumentos.\n";
     exit(1);
 }
 
@@ -17,12 +17,30 @@ if ($type === 'controller') {
     $modelContent = "<?php\n\nnamespace Kori\\Models;\n\nclass $name\n{\n    // Implemente os campos e métodos do modelo aqui\n}";
     $file = __DIR__ . "/app/Models/$name.php";
     $message = "Modelo '$name' criado com sucesso em '$file'.";
+} elseif ($type === 'component-preact') {
+    // Lógica para criar um componente Preact.js
+    $componentContent = "import { h } from 'preact';
+
+function $name() {
+    return (
+        <div>
+            {/* Implemente a lógica e a renderização do componente aqui */}
+        </div>
+    );
+}
+
+export default $name;
+";
+    $file = __DIR__ . "/resources/components/$name.js";
+    $message = "Componente Preact.js '$name' criado com sucesso em '$file'.";
 } else {
-    echo "Tipo inválido. Use 'controller' ou 'model'.\n";
+    echo "Tipo inválido. Use 'controller', 'model' ou 'component'.\n";
     exit(1);
 }
 
-if (file_put_contents($file, $type === 'controller' ? $controllerContent : $modelContent) !== false) {
+if (file_put_contents($file, 
+    $type === 'controller' ? $controllerContent : 
+    ($type === 'model' ? $modelContent : $componentContent)) !== false) {
     echo $message . "\n";
 } else {
     echo "Ocorreu um erro ao criar o $type.\n";
