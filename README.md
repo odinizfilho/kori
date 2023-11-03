@@ -62,7 +62,7 @@ Criar um componente usando Kori
 composer make-preact Nomecomponent
 ```
 
-[Documentação](https://preactjs.com/guide/v10/getting-started)
+[Documentação Preact.js](https://preactjs.com/guide/v10/getting-started)
 
 
 
