@@ -17,7 +17,7 @@ Crie um novo arquivo PHP na pasta de controladores do seu projeto, por exemplo, 
 
 Ou
 ```bash
-        composer make-controller NomeControlador
+composer make-controller NomeControlador
 ```
 
 Defina a classe do controlador e implemente a lógica desejada:
