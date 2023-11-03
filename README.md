@@ -9,6 +9,24 @@
 - [@odinizfilho](https://www.github.com/odinizfilho)
 
 
+## O seu Primeiro Projeto Kori
+
+Antes de criar seu primeiro projeto Kori, você deve garantir que sua máquina local tenha PHP, Composer, Node e NPM instalado. 
+
+Depois de instala-los, você pode criar um novo projeto Kori através do Composer create-project comando:
+
+```bash
+composer create-project odinizfilho/kori:dev-main NomedoProjeto
+```
+
+Depois de instalar o Kori, você deve instalar e criar suas dependências de NPM
+```bash
+npm install
+```
+```bash
+npm run build
+```
+
 ## Criando um Controlador
 
 Para criar um novo controlador em seu projeto, siga estas etapas:
