@@ -11,7 +11,8 @@ class HomeController
     {
         $template = new Template(); // Crie uma instância da classe Template
         $template->setTemplateDirectory(__DIR__.'/../../views');
-        $content = $template->render('index.html');
+        $data = ['koriversion' => '<p>Kori versão: Dev</p>'];
+        $content = $template->render('index.html', $data);
         $response = new Response($content);
         return $response;
     }

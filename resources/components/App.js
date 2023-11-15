@@ -39,7 +39,7 @@ export default function App() {
                 <p class="text-gray-900">Tem dúvidas? Acesse nossa documentação:</p>
                 <p>
                   <a href="https://kirophp.com/docs" class="text-sky-500 hover:text-sky-600">
-                    Ler docs &rarr;
+                    Ler docs &rarr; 
                   </a>
                 </p>
               </div>
