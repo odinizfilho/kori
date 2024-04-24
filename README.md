@@ -1,7 +1,7 @@
 
 # Kori é o seu mais novo framework PHP
 
- Um novo framework para quem deseja simplicidade. Desenvolvido com foco na eficiência e facilidade de uso, Kori oferece recursos poderosos e uma abordagem direta para o desenvolvimento de projetos web. Com suporte total ao Tailwind CSS e Preactjs, você terá todas as ferramentas necessárias para criar interfaces elegantes e responsivas. 
+ Um novo framework para quem deseja simplicidade. Desenvolvido com foco na eficiência e facilidade de uso, Kori oferece recursos poderosos e uma abordagem direta para o desenvolvimento de projetos web. Com suporte total ao Bulma CSS e Preactjs, você terá todas as ferramentas necessárias para criar interfaces elegantes e responsivas. 
 
 
 ## Autores

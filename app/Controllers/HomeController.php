@@ -7,14 +7,19 @@ use KoriViews\Template;
 
 class HomeController
 {
+    private $template;
+
+    public function __construct()
+    {
+        $this->template = new Template();
+        $this->template->setTemplateDirectory(__DIR__.'/../../views');
+    }
+
     public function index()
     {
-        $template = new Template(); // Crie uma instância da classe Template
-        $template->setTemplateDirectory(__DIR__.'/../../views');
         $data = ['koriversion' => '<p>Kori versão: Dev</p>'];
-        $content = $template->render('index.html', $data);
-        $response = new Response($content);
-        return $response;
+        $content = $this->template->render('index.html', $data);
+        return new Response($content);
     }
 
     
